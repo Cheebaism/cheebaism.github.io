@@ -17,51 +17,11 @@ const myImage = document.querySelector("img");
 myImage.addEventListener("click", () => {
   const mySrc = myImage.getAttribute("src");
   if (mySrc === "images/cheebaism_logo_01.png") {
-    myImage.setAttribute("src", "https://dacmx.neocities.org/images/cheebaism_logo_wall.png");
+    myImage.setAttribute("src", "images/cheebaism_logo_wall.png");
   } else {
     myImage.setAttribute("src", "images/cheebaism_logo_01.png");
   }
 });
 
-// Personalized welcome message code
 
-
-let myButton = document.querySelector("button");
-let myHeading = document.querySelector("h1");
-
-/* this version works without entering a name, displaying null
-
-function setUserName() {
-  const myName = prompt("Please enter your name.");
-  localStorage.setItem("name", myName);
-  myHeading.textContent = `Let's fuck up the world, ${myName}`;
-}*/
-
-//this version, wont let u through until something is entered, or check box is clcked and original text from html (cheeba cheeb yo) remains
-//
-function setUserName() {
-  const myName = prompt("Please enter your name.");
-  if (!myName) {
-    setUserName();
-  } else {
-    localStorage.setItem("name", myName);
-    myHeading.textContent = `Let's fuck up the world, ${myName}`;
-  }
-}
-
-
-
-
-
-
-if (!localStorage.getItem("name")) {
-  setUserName();
-} else {
-  const storedName = localStorage.getItem("name");
-  myHeading.textContent = `Let's fuck up the world, ${storedName}`;
-}
-
-myButton.addEventListener("click", () => {
-  setUserName();
-});
 
