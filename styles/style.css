@@ -72,6 +72,8 @@ li {
   color: darkgreen;
 }
 
+/* https://blog.hubspot.com/website/css-sidebar */
+
 body {
   width: 1000px;
   /*sets the bodies witdh*/
@@ -84,9 +86,21 @@ body {
   border: 5px solid black;
 }
 
+header {
+	background-color: black;
+	}
 nav {
-	font-size: 14px
+	font-size: 16px;
+ 	text-align: left;
+ 	background-color: orange;
 	}	
+ 	/*this is styling the section menus that the zim template creates*/
+	
+nav.mmenu {
+ 	text-align: center;
+	}
+/* I am styling the nav_dwd.js w/ this, as it is easier*/
+
 	
 	
   /*this rule sets the porition and styleof the mainpage title*/
@@ -108,22 +122,32 @@ h1 {
 img {
   display: block;
   /*the above allows the imng element to act as a block element and thus accept margin values*/
- margin: 0 auto;
+  margin: 0 auto;
   	/*this centres the image, other wise it would go to left*/
- max-width: 100%;
+  max-width: 100%;
   /*image does not go over widht value of body*/
   height: auto;
- padding: 20px 20px 20px 0;
-  /*keeps the text away from the image*/
-/*   float: left; overrules the margin*/
-/*  this lets the writng to wrap around it - I can apply it direct in the html too*/
-/* read this https://www.freecodecamp.org/news/html-center-image-css-align-img-center-example/ */
-/*https://www.browserstack.com/guide/align-image-in-centre-in-html-css */
+/*  height:300px*/
+  padding: 20px 20px 20px 0;
+  /*the above (padding) keeps the text away from the image*/
+  /*   float: left; overrules the margin*/
+  /*  the above (float) lets the writng to wrap around it - I can apply it direct in the html too*/
+  /* read this https://www.freecodecamp.org/news/html-center-image-css-align-img-center-example/ */
+  /*https://www.browserstack.com/guide/align-image-in-centre-in-html-css */
 }
+
+img.banner {
+/* THIS IS FOR THE BANNER MANET_EDITDWD.html - w/out it keeps 2nd photo in same size, w/ it switchs to max of both images*/
+        /*max-width: 100%;*/
+        /*image does not go over widht value of body*/  
+         height: auto; 
+          width:auto;
+        }
 
 /*the below corresponds class="centre"*/
 h2.centre {
 	  text-align: center;
+	  margin: 1px 0 1px 0;
 	}
 
 /* this corresponds to the image w/ class="eagle" in it. */
@@ -131,22 +155,24 @@ img.eagle {
 	/* margin sets image to teh left - as I cant get inline to work*/
 	margin: 0;
 	/*I have commented the width & height out and used them in the HTML instead. 
-	It keeps page layout constatn while allowing images to load see https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/*/
+	It keeps page layout constatn while allowing images to load see https://www.smashingmagazine.com/
+	2020/03/setting-height-width-images-important-again/*/
 	/*width: 200px;*/
 	/*height: 200px;*/
-	/* if i want a text wrap:
+	/* if i want a text wrap:*/
 	float: left;
-	padding: 20px 30px 20px 20px;*/
+	padding: 20px 30px 20px 0;
        }
-
-
-/*this is going to give us some basic JS that will allow us to note a list item finifes*/
-.done {
-  color: darkseagreen;
-  text-decoration: line-through solid black 2px;
-}
-
-
+       
+       
+ /* The sidebar menu  https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp*/
+   
+  
+  
+footer {
+	text-align: center;
+	}
+	
 
 
 

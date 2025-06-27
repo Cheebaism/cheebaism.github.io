@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cheebaism"/>
+    <meta name="description" content="Cheebaism analyses the intersection of liberalism, drug wars, sport and 
+    media."/>
+	 
+    <meta name="author" content="Cheebaism"/>
+    <meta name="description" content="Cheebaism analyses the intersection of liberalism, drug wars, sport and 
+    media."/>
+
+    <link href="styles/style.css" 
+    rel="stylesheet" />
+      
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap"
+    rel="stylesheet">  	 
+    
+    
+<!--links to Javascript file (js)-->
+        <script async src="scripts/dwd_banner.js"></script> 
+
+<!-- links to favicon-->
+	<link rel="icon" href="favicon.ico" 
+	type="image/x-icon" />
+    
+      </head>
+	 
+<hr/>
+
+ <header>
+    <h2 class="centre"><strong> Reporting on the intersection of liberalism and counter-insurgency.</strong></h2>
+    <img src="images/dwd01_small.png" alt="US drug war eagle vs Mexico" width="500" height="500" class="banner"/>
+    
+    <hr/>
+    
+  </header/> 
+  
+ 
+<div id="navigation"></div>
+<hr/>
+ 
+  <body>
+    <details id="pagenav">
+    <summary>Section Index</summary>
+        <nav>[% index() %]</nav>
+    </details>
+    <div id="wrap">
+      <!-- Main content -->
+      <div id="container">
+        <main>
+        <!--[% FOR page IN pages %]-->
+            <div class='heading'>
+            <h1>[% page.title %] <a name='[% anchor(page) %]'></a></h1>
+           
+            </div>
+
+            <div class='content'>
+            [% page.body %]
+            </div>
+
+            <br />
+
+<!-- THIS SECTION BELOW DOES THE BACKLINKS AT BOOTOM, I DONT NEED IT, BUT DELETING IT ALL CAUSES PROBS-->
+      <!--      <div class='page-footer'>-->
+            <!--[% FOR link IN page.backlinks %]-->
+<!--                [% IF loop.first %]<b>[% gettext("Backlinks:") %]</b>[% END %]-->
+
+                <!--<a href='[% uri(link) %]'>[% link.name %]</a>-->
+                <!--                [% IF loop.last %]<br /><br />[% END %]-->
+
+
+            <!--[% END %]-->
+
+            <!--[% FOR file IN page.attachments %]-->
+            <!--    [% IF loop.first %]-->
+<!--                <details>-->
+<!--                <summary>[% gettext("Attachments") %]</summary>-->
+<!--                    <table>-->
+<!--                [% END %]-->
+
+<!--                    <tr><td><a href='[% uri(file) %]'>[% file.basename %]</a></td><td>&nbsp;</td><td>[% 
+                    file.size %]</td></tr>-->
+
+<!--                [% IF loop.last %] -->
+    <!--                </table> -->
+    <!--            </details> -->
+    <!--        [% END %] -->
+            <!--[% END %]-->
+    <!--        </div> -->
+
+<!--            [% IF not loop.last %]<hr />[% END %] -->
+
+        <!--[% END %]-->
+
+        </main>
+        <!-- Pagination links -->
+      </div>
+      <!-- Footer -->
+      <footer><span>©2025 copypirate</span></footer>
+    </div>
+
+
+  </body>
+  <script src="nav_dwd.js"></script>
+</html>
